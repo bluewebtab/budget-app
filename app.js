@@ -1,5 +1,6 @@
 //Budget Controller
 var budgetController = (function () {
+    
 
     var Expense = function(id, description, value){
         this.id = id;
@@ -31,6 +32,7 @@ var budgetController = (function () {
     
     return {
         addItem: function(type, des, val){
+        
             var newItem, ID;
             
             
@@ -71,7 +73,7 @@ var budgetController = (function () {
 
 //UI Controller
 var UIController = (function () {
-
+    
     var DOMstrings = {
         inputType: '.add__type',
         inputDescription: '.add__description',

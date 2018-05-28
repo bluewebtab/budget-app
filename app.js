@@ -83,7 +83,7 @@ var UIController = (function () {
         expensesContainer: '.expenses__list'
         
     }
-
+    //this will return the values from the data that is inserted.
     return {
         getInput: function () {
             return {
@@ -94,7 +94,7 @@ var UIController = (function () {
                 value: document.querySelector(DOMstrings.inputValue).value
             }
         },
-        
+    //this is the structure that will occur once the check icon is clicked
         addListItem:function(obj, type){
             var html, newHTMl, element;
             //create HTML string with plaeholder text
@@ -134,11 +134,11 @@ var UIController = (function () {
 
 var controller = (function (budgetCtrl, UICtrl) {
     var DOM = UICtrl.getDOMstrings();
-
+    //this function allows the input button to work
     var setupEventListeners = function () {
         document.querySelector(DOM.inputBtn).addEventListener('click', ctrlAddItem);
 
-
+    //this allows the the enter button to work 
         document.addEventListener('keypress', function (event) {
             if (event.keyCode === 13 || event.which === 13) {
                 ctrlAddItem();
@@ -152,7 +152,7 @@ var controller = (function (budgetCtrl, UICtrl) {
 
 
 
-
+    //this function occurs when the input button is clicked
     var ctrlAddItem = function () {
         var input, newItem;
         //1.Get the filed input data

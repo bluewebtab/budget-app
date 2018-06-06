@@ -19,15 +19,19 @@ var budgetController = (function () {
         var sum = 0;
         data.allItems[type].forEach(function (cur) {
             sum += cur.value;
+
         });
         data.totals[type] = sum;
     }
 
     //this will receive data. 
+//    data saves id, description, and value
     var data = {
         allItems: {
             exp: [],
             inc: []
+            
+        
         },
         totals: {
             exp: 0,
@@ -54,7 +58,6 @@ var budgetController = (function () {
                 ID = 0;
             }
             
-
             //Create new item based on 'inc' or 'exp' type
             if (type === 'exp') {
                 newItem = new Expense(ID, des, val);
@@ -122,6 +125,7 @@ var budgetController = (function () {
         }
     }
 
+    
 
 })();
 
@@ -320,7 +324,8 @@ var controller = (function (budgetCtrl, UICtrl) {
         //3.Update and show the new budget
         updateBudget();
     }
-        
+
+    
         
     };
 
@@ -337,6 +342,7 @@ var controller = (function (budgetCtrl, UICtrl) {
             setupEventListeners();
         }
     };
+
 
 
 })(budgetController, UIController);

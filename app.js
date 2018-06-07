@@ -187,7 +187,7 @@ var UIController = (function () {
             newHtml = newHtml.replace('%value%', obj.value);
              
 
-            console.log(newHtml)
+        
             //Inserts the exp and inc items into the DOM
             document.querySelector(element).insertAdjacentHTML('beforeend', newHtml);
         },
@@ -204,11 +204,15 @@ var UIController = (function () {
             fields = document.querySelectorAll(DOMstrings.inputDescription + ', ' + DOMstrings.inputValue);
 
             //this activates the slice method by calling fields
-            var fieldsArr = Array.prototype.slice.call(fields);
-
+             fieldsArr = Array.prototype.slice.call(fields);
+            
+            //this goes to each value{desc/val}  and erases it.
+            //callback function has access to each argument in the array
+            //which is called current .
             fieldsArr.forEach(function (current, index, array) {
                 current.value = "";
-                console.log(fieldsArr)
+                
+                
 
             });
 

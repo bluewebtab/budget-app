@@ -185,6 +185,7 @@ var UIController = (function () {
             newHtml = html.replace('%id%', obj.id);
             newHtml = newHtml.replace('%description%', obj.description);
             newHtml = newHtml.replace('%value%', obj.value);
+             
 
             console.log(newHtml)
             //Inserts the exp and inc items into the DOM
@@ -207,7 +208,7 @@ var UIController = (function () {
 
             fieldsArr.forEach(function (current, index, array) {
                 current.value = "";
-                console.log(current)
+                console.log(fieldsArr)
 
             });
 
@@ -288,7 +289,7 @@ var controller = (function (budgetCtrl, UICtrl) {
             //3.Add the item to the UI
             UICtrl.addListItem(newItem, input.type);
 
-            //4.Clear the fields
+            //4.Clear the fields of description and value after you press submit
             UICtrl.clearFields();
 
             //5. Calculate and update the budget
@@ -305,6 +306,7 @@ var controller = (function (budgetCtrl, UICtrl) {
     var ctrlDeleteItem = function (event){
     var itemID, splitID,type, ID;
     itemID = event.target.parentNode.parentNode.parentNode.parentNode.id;
+    
     
     if(itemID){
         //inc-1

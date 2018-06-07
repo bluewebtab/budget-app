@@ -22,8 +22,8 @@ var budgetController = (function () {
             sum += cur.value;
 
         });
+        //this data is added to totals
         data.totals[type] = sum;
-        console.log(sum)
 
     }
     //this will receive data. 
@@ -82,10 +82,11 @@ var budgetController = (function () {
 //            data.allItems[type][id];
             //ids = [1 2 4 6 8]
             //index = 3
+            //maps will go through each array and return the id
              ids = data.allItems[type].map(function(current){
                return current.id; 
             });
-            
+            //index equals to the number (index) it's from in the array
             index = ids.indexOf(id);
             
             if(index !== -1){

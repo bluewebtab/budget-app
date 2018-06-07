@@ -18,12 +18,14 @@ var budgetController = (function () {
 
         var sum = 0;
         data.allItems[type].forEach(function (cur) {
+//   this goes through each array and adds it with the sum
             sum += cur.value;
 
         });
         data.totals[type] = sum;
-    }
+        console.log(sum)
 
+    }
     //this will receive data. 
 //    data saves id, description, and value
     var data = {

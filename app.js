@@ -18,11 +18,10 @@ var budgetController = (function () {
 
         var sum = 0;
         data.allItems[type].forEach(function (cur) {
-//   this goes through each array and adds it with the sum
+//   this goes through each array targets the value and adds it with the sum
             sum += cur.value;
-
         });
-        //this data is added to totals
+        //this total value is added to totals
         data.totals[type] = sum;
 
     }
@@ -310,7 +309,7 @@ var controller = (function (budgetCtrl, UICtrl) {
     var ctrlDeleteItem = function (event){
     var itemID, splitID,type, ID;
     itemID = event.target.parentNode.parentNode.parentNode.parentNode.id;
-    
+    console.log(itemID)
     
     if(itemID){
         //inc-1

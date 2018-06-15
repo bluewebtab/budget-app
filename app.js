@@ -344,7 +344,7 @@ var controller = (function (budgetCtrl, UICtrl) {
     //this function allows the input button to work
     var setupEventListeners = function () {
         document.querySelector(DOM.inputBtn).addEventListener('click', ctrlAddItem);
-
+        
         //this allows the the enter button to work 
         document.addEventListener('keypress', function (event) {
             if (event.keyCode === 13 || event.which === 13) {
